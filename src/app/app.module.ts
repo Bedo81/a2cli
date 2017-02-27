@@ -11,6 +11,7 @@ import { MyNewComponentComponent } from './my-new-component/my-new-component.com
 import { TripsComponent } from './trips/trips.component';
 
 import { DataService } from './shared/services/data.service';
+import { SearchComponent } from './trips/search/search.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: MyNewComponentComponent },
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MyNewComponentComponent,
-    TripsComponent
+    TripsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
