@@ -6,7 +6,7 @@
     {{trip.country}}
     <ul>
       <li *ngFor="let tripdate of trip.dates">
-        {{tripdate.start }} - {{tripdate.end}}
+        {{tripdate.start | amDateFormat:'LL'}} - {{tripdate.end | amDateFormat:'LL'}}
       </li>
     </ul>
   </li>

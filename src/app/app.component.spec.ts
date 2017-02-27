@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { MyNewComponentComponent} from './my-new-component/my-new-component.component';
 import { TripsComponent} from './trips/trips.component';
 
+import { MomentModule } from 'angular2-moment';
+
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -13,6 +15,9 @@ describe('AppComponent', () => {
         MyNewComponentComponent,
         TripsComponent
       ],
+      imports: [
+        MomentModule
+      ]
     });
     TestBed.overrideComponent(AppComponent, {
       set: {template: '<h1>{{title}}</h1>'}
@@ -31,7 +36,7 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('app works!');
   }));
-
+  
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
