@@ -6,6 +6,7 @@ import { MyNewComponentComponent} from './my-new-component/my-new-component.comp
 import { TripsComponent} from './trips/trips.component';
 
 import { MomentModule } from 'angular2-moment';
+import { SearchBoxComponent } from './trips/search-box/search-box.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MyNewComponentComponent,
-        TripsComponent
+        TripsComponent,
+        SearchBoxComponent
       ],
       imports: [
         MomentModule
