@@ -3,13 +3,15 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MyNewComponentComponent} from './my-new-component/my-new-component.component';
+import { TripsComponent} from './trips/trips.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        MyNewComponentComponent
+        MyNewComponentComponent,
+        TripsComponent
       ],
     });
     TestBed.compileComponents();
