@@ -8,6 +8,8 @@ import { SearchBoxComponent } from './trips/search-box.component';
 
 import { MomentModule } from 'angular2-moment';
 
+import { DatepickerModule } from 'ng2-bootstrap/datepicker';
+
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -18,6 +20,7 @@ describe('AppComponent', () => {
         SearchBoxComponent
       ],
       imports: [
+        DatepickerModule.forRoot(),
         MomentModule
       ]
     });

@@ -13,6 +13,8 @@ import { TripsComponent } from './trips/trips.component';
 import { DataService } from './shared/services/data.service';
 import { SearchBoxComponent } from './trips/search-box.component';
 
+import { DatepickerModule } from 'ng2-bootstrap/datepicker';
+
 const appRoutes: Routes = [
   { path: 'home', component: MyNewComponentComponent },
   { path: 'trips',      component: TripsComponent }
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    DatepickerModule.forRoot(),
     FormsModule,
     HttpModule,
     MomentModule,
