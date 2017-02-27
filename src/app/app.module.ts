@@ -4,9 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { MomentModule } from 'angular2-moment';
+
 import { AppComponent } from './app.component';
 import { MyNewComponentComponent } from './my-new-component/my-new-component.component';
 import { TripsComponent } from './trips/trips.component';
+
+import { DataService } from './shared/services/data.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: MyNewComponentComponent },
@@ -23,9 +27,10 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    MomentModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

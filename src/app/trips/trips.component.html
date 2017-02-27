@@ -1,3 +1,12 @@
 <p>
   trips works!
 </p>
+<ul>
+  <li *ngFor="let trip of trips">
+    {{trip.country}}
+    <ul>
+      <li *ngFor="let tripdate of trip.dates">
+        {{tripdate.start }} - {{tripdate.end}}
+      </li>
+    </ul>
+  </li>
