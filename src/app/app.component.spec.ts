@@ -4,9 +4,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MyNewComponentComponent} from './my-new-component/my-new-component.component';
 import { TripsComponent} from './trips/trips.component';
+import { SearchBoxComponent } from './trips/search-box.component';
 
 import { MomentModule } from 'angular2-moment';
-import { SearchBoxComponent } from './trips/search-box/search-box.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
