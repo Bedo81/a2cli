@@ -1,14 +1,11 @@
 <h1>
   {{title}}
 </h1>
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/trips" routerLinkActive="active">Trips</a>
+</nav>
 <div>
-  <app-my-new-component>
-
-  </app-my-new-component>
-</div>
-<div>
-  <app-trips>
-
-  </app-trips>
+  <router-outlet></router-outlet>
 </div>
 

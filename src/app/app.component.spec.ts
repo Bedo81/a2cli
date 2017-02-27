@@ -14,6 +14,9 @@ describe('AppComponent', () => {
         TripsComponent
       ],
     });
+    TestBed.overrideComponent(AppComponent, {
+      set: {template: '<h1>{{title}}</h1>'}
+    });
     TestBed.compileComponents();
   });
 
