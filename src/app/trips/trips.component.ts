@@ -12,12 +12,16 @@ import {DataService} from '../shared/services/data.service';
 })
 export class TripsComponent implements OnInit {
   public trips: Trip[];
-  
+
   constructor(public dataService: DataService) {
   }
 
   ngOnInit() {
     this.getTrips();
+  }
+
+  updateResults(results: any) {
+    this.trips = results;
   }
 
   getTrips(): void {

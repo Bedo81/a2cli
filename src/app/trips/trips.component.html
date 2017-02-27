@@ -1,7 +1,11 @@
 <p>
   trips works!
 </p>
-<app-search-box></app-search-box>
+<app-search-box
+  (loading)="loading = $event"
+  (results)="updateResults($event)"
+>
+</app-search-box>
 <ul>
   <li *ngFor="let trip of trips">
     {{trip.country}}
