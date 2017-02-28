@@ -6,6 +6,15 @@
   (results)="updateResults($event)"
 >
 </app-search-box>
+<select [(ngModel)]="selectedYear" <!-- (change)="updateResults1($event)" -->>
+  <option *ngFor="let y of years" [ngValue]="y">{{y}}</option>
+</select>
+<select [(ngModel)]="selectedMonth" <!-- (change)="updateResults2($event)" -->>
+  <option *ngFor="let m of months" [ngValue]="m">{{m}}</option>
+</select>
+
+
+<pre class="card card-block card-header">Selected date is: <em>{{ selectedYear }} {{ selectedMonth }}</em></pre>
 
 <div>
   <pre class="card card-block card-header">Selected date is: <em *ngIf="dt">{{ getDate() | date:'fullDate'}}</em></pre>

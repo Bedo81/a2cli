@@ -13,6 +13,16 @@ import {DataService} from '../shared/services/data.service';
 export class TripsComponent implements OnInit {
   public trips: Trip[];
 
+  public years = [
+    2017, 2018, 2019, 2020
+  ];
+  public selectedYear = null;
+
+  public months = [ "January","February","March","April","May","June","July","August","September","October","November","December" ];
+  public selectedMonth = null;
+
+
+
   // datepicker ----
 
   public dt: Date = new Date();
@@ -46,7 +56,7 @@ export class TripsComponent implements OnInit {
     ];
 
     // ----
-    
+
   }
 
   ngOnInit() {
