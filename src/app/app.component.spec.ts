@@ -1,33 +1,35 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import { MyNewComponentComponent} from './my-new-component/my-new-component.component';
-import { TripsComponent} from './trips/trips.component';
-import { SearchBoxComponent } from './trips/search-box.component';
+import {TestBed, async} from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import {AppComponent} from './app.component';
+import {MyNewComponentComponent} from './my-new-component/my-new-component.component';
+import {TripsComponent} from './trips/trips.component';
+import {SearchBoxComponent} from './trips/search-box.component';
 
-import { MomentModule } from 'angular2-moment';
+import {MomentModule} from 'angular2-moment';
 
-import { DatepickerModule } from 'ng2-bootstrap/datepicker';
+import {DatepickerModule} from 'ng2-bootstrap/datepicker';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        MyNewComponentComponent,
-        TripsComponent,
-        SearchBoxComponent
-      ],
-      imports: [
-        DatepickerModule.forRoot(),
-        MomentModule
-      ]
-    });
-    TestBed.overrideComponent(AppComponent, {
-      set: {template: '<h1>{{title}}</h1>'}
-    });
-    TestBed.compileComponents();
+             declarations: [
+               AppComponent,
+               MyNewComponentComponent,
+               TripsComponent,
+               SearchBoxComponent
+             ],
+             imports: [
+               DatepickerModule,
+               FormsModule,
+               MomentModule
+             ]
+           })
+           .overrideComponent(AppComponent, {
+             set: {template: '<h1>{{title}}</h1>'}
+           })
+           .compileComponents();
   });
 
   it('should create the app', async(() => {
