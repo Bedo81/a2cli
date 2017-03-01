@@ -67,6 +67,13 @@ export class TripsComponent implements OnInit {
     this.trips = results;
   }
 
+  updateResults1() {
+    let xx = this.selectedMonth;
+    let yy = this.selectedYear;
+    debugger;
+    //this.trips = this.trips.filter();
+  }
+
   getTrips(): void {
     this.dataService.getTrips().subscribe(
       trips => {

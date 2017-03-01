@@ -6,10 +6,10 @@
   (results)="updateResults($event)"
 >
 </app-search-box>
-<select [(ngModel)]="selectedYear" <!-- (change)="updateResults1($event)" -->>
+<select [(ngModel)]="selectedYear" (change)="updateResults1($event)">
   <option *ngFor="let y of years" [ngValue]="y">{{y}}</option>
 </select>
-<select [(ngModel)]="selectedMonth" <!-- (change)="updateResults2($event)" -->>
+<select [(ngModel)]="selectedMonth" (change)="updateResults1($event)">
   <option *ngFor="let m of months" [ngValue]="m">{{m}}</option>
 </select>
 
