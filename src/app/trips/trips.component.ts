@@ -4,6 +4,7 @@ import * as moment from 'moment';
 
 import {Trip} from '../shared/models/trip';
 import {DataService} from '../shared/services/data.service';
+import {TripsService} from './trips.service';
 
 @Component({
   selector: 'app-trips',
